@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+<title>Random Snake Name Generator</title></head>
+<center><h1>What Should We Name Our New Snake?</h1></center>
+<br>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+var boyname = new Array(
+"Sir Hiss","Arbok","Arnie","Archer","Lucky Number Slevin","Banana","Beetlejuice","Bruce","Conan","Drago","Tightsqueeze","William Snakespeare","Kermit","Lerk"
+)
+var girlname = new Array(
+"Nagiri","Herb","Kellog","Lil Squeezer","Lokki","Mai Tai","Noodles","Ms. Anaconda","Rajah","Pretzel","Spaz","Snickers","Sybil","Scarlett","Trendi"
+)
+
+var i = 0;
+function RandomName(nameform) {
+   
+if(nameform.gender.options[1].selected == true) {
+i = Math.floor(Math.random() * girlname.length);
+nameform.first.value=girlname[i] 
+
+}
+else { 
+i = Math.floor(Math.random() * boyname.length);
+nameform.first.value=boyname[i] 
+   
+   }
+}
+</script>
+</HEAD>
+
+<BODY>
+
+<center>
+<form>
+<table width=300>
+<tr>
+<td align=center colspan=2>
+<select name=gender size=1>
+<option value="Male">Male 
+<option value="Female">Female
+</select>  
+<input type=button name=generate value="Get a Name!" onClick="RandomName(this.form)">
+</td>
+</tr>
+<tr>
+<td align=center><b>Snake Name:</b></td>
+<td align=center><input type=text name=first size=30></td>
+</tr>
+<tr>
+
+</table>
+</form>
+</center>
